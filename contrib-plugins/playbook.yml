@@ -12,3 +12,8 @@
   roles:
     - { role: datadog, when: datadog_enabled|bool }
 
+
+- name: Install newrelic
+  hosts: all:!role=bastion
+  roles:
+    - { role: newrelic, when: newrelic_enabled|bool }

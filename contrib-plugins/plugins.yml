@@ -6,3 +6,7 @@
 - src: https://github.com/wallies/ansible-datadog.git
   path: contrib-plugins/roles
   name: datadog
+
+- src: joe1chen.newrelic-coreos
+  path: contrib-plugins/roles
+  name: newrelic

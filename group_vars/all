@@ -28,6 +28,7 @@ chronos_enabled: true
 cadvisor_enabled: true
 marathon_enabled: true
 datadog_enabled: false
+newrelic_enabled: false
 scope_enabled: false
 docker_host: 'unix:///var/run/weave/weave.sock'
 
@@ -35,6 +36,8 @@ datadog_api_key: "{{ DD_API_KEY }}"
 datadog_config:
   tags: "{{ mesos_cluster_name }}"
   log_level: INFO
+
+newrelic_license_key: "{{ NEWRELIC_LICENSE_KEY }}"
 
 coreos_timezone: 'Europe/London'
 traefik_network_interface: "eth0"
