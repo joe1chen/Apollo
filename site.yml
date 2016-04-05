@@ -23,6 +23,9 @@
 - hosts: all:!role=bastion
   roles:
     - docker
+
+- hosts: all:!role=bastion
+  roles:
     - weave
     - consul
     # @todo - fix vault integration with coreOS
@@ -39,8 +42,8 @@
   roles:
     - zookeeper
     - { role: mesos, mesos_install_mode: "master" }
-    - { role: marathon, when: marathon_enabled|bool }
     - mesos_consul
+    - { role: marathon, when: marathon_enabled|bool }
   environment:
     DOCKER_HOST: "{{ docker_host }}"
 
